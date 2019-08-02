@@ -1,0 +1,7 @@
+{
+    "compilerOptions": { // instruções para o compilador
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": true 
+    }
+}
