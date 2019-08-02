@@ -1,0 +1,23 @@
+<form #form="ngForm">
+  <div>
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" [(ngModel)]="name" #nameVerify="ngModel" required>
+    <span *ngIf="nameVerify.invalid">Name is required</span>
+  </div>
+  <br>
+  <div>
+    <label for="email">Email: </label>
+    <input type="text" id="email" name="email" [(ngModel)]="email" #emailVerify="ngModel" email>
+    <span *ngIf="emailVerify.invalid">Email is invalid</span>
+  </div>
+<button type="submit" [disabled]="form.invalid">Submit</button>
+</form>
+  
+  <!--
+    Ações que posso atribuir a um campo:
+    * Required;
+    * Pattern - Regex;
+    * Minlength maxlength;
+
+   O Angular associa a os campos e form as classes css (ngValid, ngInvalid, ngTouched, ngUntouched, etc)
+-->
