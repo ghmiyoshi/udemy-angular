@@ -1,0 +1,41 @@
+<h1>
+  {{title}}
+</h1>
+
+<br>
+
+<app-task-list></app-task-list>
+
+<br>
+{{user | json}} <!-- Pipes -->
+<br>
+{{ upperCaseText | uppercase }}
+<br>
+{{ lowerCaseText | lowercase }}
+<br>
+{{ percentValue | percent: digitInfo }}
+<br>
+{{ date | date: 'dd/MM/yyyy' }}
+<br>
+{{ money | currency:'BRL' }}
+<br>
+
+<div *ngIf="isAdmin"> <!-- Diretivas-->
+  Administrador 2
+</div>
+<br>
+
+<div [ngSwitch]="profile">
+<p *ngSwitchCase="1">
+  Junior  
+</p>
+<p *ngSwitchCase="2">
+  Pleno
+</p>
+<p *ngSwitchDefault>
+  Senior
+</p>
+</div>
+
+
+
